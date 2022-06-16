@@ -17,7 +17,16 @@ jobs:
     # name: Auto-Documentation
     runs-on: ubuntu-latest
     
-    steps:  # steps for the auto-documentatios
+    steps:  # steps for the auto-documentation
+
+      - uses: actions/checkout@master   # checks out repo so workflow can access it ----TEST THIS----
+      - uses: actions/setup-python@v4   # sets up a python environment for use
+      - name: Install dependencies
+        run: |                                  
+          python -m pip install --upgrade pip
+          pip install -U sphinx
+          pip install sphinx-autodoc-typehints
+          pip install sphinx_rtd_theme
 
       - name: Run a one-line script
         run: echo Hello, world!
