@@ -20,7 +20,7 @@ jobs:
     steps:  # steps for the auto-documentation
 
       - uses: actions/checkout@master   # checks out repo so workflow can access it ----TEST THIS----
-      - uses: actions/setup-python@v4   # sets up a python environment for use
+      - uses: actions/setup-python@v3   # sets up a python environment for use
       - name: Install dependencies
         run: |                                  
           python -m pip install --upgrade pip
